@@ -14,7 +14,6 @@ li {
 table {
     border-collapse: collapse;
     border: 1px solid #eee;
-    text-align: center;
     width: 60%;
 }
 
@@ -26,4 +25,9 @@ table tr th {
 table tr td {
     padding: 10px 20px;
     border: 1px solid #eee;
+}
+
+pre {
+    margin: 0;
+    font-family: monospace;
 }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3 / 자바스크립트 소개</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Chapter 3 / 자바스크립트 소개</h1>
+    <section>
+        <h2>자바스크립트 언어</h2>
+        <ui>
+            <li>스크립트 언어 / 컴파일 언어(C/C++/C#,Java)</li>
+            <li>클라이언트의 기능 강화 - 현재는 서버 및 일반 애플리케이션에도 사용</li>
+            <li>인터프리터(명령어해석기) 필요 → 브라우저 내부에 있음 - 느려질 수 있지만, 컴퓨터 기술의 발전으로 빨라 짐</li>
+        </ui>
+    </section>
+    <section>
+        <h2>자바스크립트 역할</h2>
+        <ui>
+            <li>동적 처리 - 이벤트에 따라 정보 변화</li>
+            <li>상호작용 처리 - 이용자의 동작에 따른 처리</li>
+            <li>접근성 개선 - 음성, 터치, 화면크기, 다양한 플랫폼</li>
+            <li>사용자 경혐 개선 (UX) - 이용자에게 편리한 인터페이스 (UI)</li>
+            <li>애플리케이션 개발 - 모바일/데스크탑 애플리케이션, 서버 애플레케이션</li>
+        </ui>
+    </section>
+    <section>
+        <h2>자바스크립트 작성 방법</h2>
+        <ui>
+            <li>Inline JavaScript</li>
+            <table>
+                <tr>
+                    <td style="text-align: left;">&lt;button onclick="add()"&gt;ADD&lt;/button&gt;</td>
+                </tr>
+            </table>
+            <li>Internal JavaScript</li>
+            <table>
+                <tr>
+                    <td style="text-align: left;">&lt;script&gt;코드&lt;/script&gt;</td>
+                </tr>
+            </table>
+            <li>External JavaScript</li>
+            <table>
+                <tr>
+                    <td style="text-align: left;">&lt;script src="app.js"&gt;</td>
+                </tr>
+            </table>
+            <li>필요할 때 코드 생성 추가</li>
+            <table>
+                <tr>
+                    <td style="text-align: left;">
+                        • 문서내의 자바스크립트 코드가, 현재 HTML 문서내에 자바스크립트 코드 추가 (코드가 코드를 추가)<br>
+                        • 자바스크립트 코드로 컨텐츠, 태그, CSS, 코드 추가 가능
+                    </td>
+                </tr>
+            </table>
+        </ui>
+    </section>
+    <section>
+        <h2>타입스크립트</h2>
+        <ui>
+            <li>자바스크립트의 슈퍼 세트</li>
+            <li>엄격한 타입 체크 언어 (C,C++, …)</li>
+            <li>컴파일을 통해 자바스크립트 코드로 변환. 컴파일러 필요 (ex, 바벨)</li>
+            <li>약간 복잡함. 변환 과정이 번거로움</li>
+            <li>안전하므로 기업용 애플리케이션에 많이 사용</li>
+        </ui>
+    </section>
+    <section>
+        <h2>JavaScript VS TypeScript</h2>
+        <table>
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th>JavaScript</th>
+                <th>TypeScript</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>언어 타입</td>
+                <td>동적 타이핑 (Dynamic Typing)</td>
+                <td>정적 타이핑 (Static Typing)</td>
+              </tr>
+              <tr>
+                <td>컴파일 필요 여부</td>
+                <td>필요 없음 (바로 실행 가능)</td>
+                <td>컴파일 필요 (.ts → .js)</td>
+              </tr>
+              <tr>
+                <td>런타임 오류 발생 가능성</td>
+                <td>높음 (타입 확인이 런타임에 이뤄짐)</td>
+                <td>낮음 (컴파일 시 타입 오류 확인 가능)</td>
+              </tr>
+              <tr>
+                <td>개발 속도</td>
+                <td>초기 빠름 (설정이 간단하고 유연함)</td>
+                <td>초기 느릴 수 있음 (타입 정의 필요)</td>
+              </tr>
+              <tr>
+                <td>유지보수</td>
+                <td>대형 프로젝트에서 어려울 수 있음</td>
+                <td>대형 프로젝트에 적합 (안정성↑)</td>
+              </tr>
+              <tr>
+                <td>IDE 지원</td>
+                <td>기본적인 코드 완성</td>
+                <td>자동완성, 리팩토링, 오류 탐지 강력</td>
+              </tr>
+              <tr>
+                <td>러닝 커브</td>
+                <td>낮음 (웹 초보자에게 익숙함)</td>
+                <td>상대적으로 높음 (타입 개념 학습 필요)</td>
+              </tr>
+              <tr>
+                <td>타입 검사</td>
+                <td>없음</td>
+                <td>있음 (정의 또는 추론)</td>
+              </tr>
+              <tr>
+                <td>코드 안정성</td>
+                <td>낮음 (오타나 API 오류 탐지 어려움)</td>
+                <td>높음 (컴파일러가 오류 탐지)</td>
+              </tr>
+              <tr>
+                <td>라이브러리 호환성</td>
+                <td>모든 JS 라이브러리 사용 가능</td>
+                <td>대부분 가능, `.d.ts` 필요</td>
+              </tr>
+              <tr>
+                <td>유연성</td>
+                <td>매우 높음</td>
+                <td>비교적 낮음 (타입에 제한됨)</td>
+              </tr>
+              <tr>
+                <td>커뮤니티 및 문서</td>
+                <td>매우 크고 오래됨</td>
+                <td>성장 중이며 문서 풍부</td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+</html>

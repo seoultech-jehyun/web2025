@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4 / 연산자와 제어문</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Chapter 4 / 연산자와 제어문</h1>
+    <section>
+        <h2>연산자</h2>
+        <ui>
+          <table>
+            <tr>
+                <td style="text-align: left;">
+                  age = currentYear - birthYear + 1
+                </td>
+            </tr>
+          </table>
+          <li>age, currentYear, birthYear, 1은 연산 대상이 되기 때문에 '피연산자'라고 부름</li>
+          <li>'=, -, +'는 연산자</li>
+        </ui>
+        <table>
+          <thead>
+            <tr>
+              <th>종류</th>
+              <th>연산자</th>
+              <th>설명</th>
+              <th>예시</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 산술 연산자 -->
+            <tr>
+              <td rowspan="6">산술 연산자</td>
+              <td>+</td>
+              <td>덧셈 / 문자열 연결</td>
+              <td>5 + 3 → 8, "a" + "b" → "ab"</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>뺄셈</td>
+              <td>5 - 3 → 2</td>
+            </tr>
+            <tr>
+              <td>*</td>
+              <td>곱셈</td>
+              <td>5 * 2 → 10</td>
+            </tr>
+            <tr>
+              <td>/</td>
+              <td>나눗셈</td>
+              <td>10 / 2 → 5</td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td>나머지</td>
+              <td>10 % 3 → 1</td>
+            </tr>
+            <tr>
+              <td>**</td>
+              <td>거듭제곱</td>
+              <td>2 ** 3 → 8</td>
+            </tr>
+        
+            <!-- 대입 연산자 -->
+            <tr>
+              <td rowspan="6">대입 연산자</td>
+              <td>=</td>
+              <td>값 할당</td>
+              <td>x = 10</td>
+            </tr>
+            <tr>
+              <td>+=</td>
+              <td>더해서 할당</td>
+              <td>x += 5 → x = x + 5</td>
+            </tr>
+            <tr>
+              <td>-=</td>
+              <td>빼서 할당</td>
+              <td>x -= 2 → x = x - 2</td>
+            </tr>
+            <tr>
+              <td>*=</td>
+              <td>곱해서 할당</td>
+              <td>x *= 3 → x = x * 3</td>
+            </tr>
+            <tr>
+              <td>/=</td>
+              <td>나눠서 할당</td>
+              <td>x /= 2 → x = x / 2</td>
+            </tr>
+            <tr>
+              <td>%=</td>
+              <td>나머지 할당</td>
+              <td>x %= 3 → x = x % 3</td>
+            </tr>
+        
+            <!-- 비교 연산자 -->
+            <tr>
+              <td rowspan="6">비교 연산자</td>
+              <td>==</td>
+              <td>값만 비교 (느슨한 비교)</td>
+              <td>5 == "5" → true</td>
+            </tr>
+            <tr>
+              <td>===</td>
+              <td>값과 타입 모두 비교 (엄격한 비교)</td>
+              <td>5 === "5" → false</td>
+            </tr>
+            <tr>
+              <td>!=</td>
+              <td>값만 다르면 true</td>
+              <td>5 != "5" → false</td>
+            </tr>
+            <tr>
+              <td>!==</td>
+              <td>값이나 타입 다르면 true</td>
+              <td>5 !== "5" → true</td>
+            </tr>
+            <tr>
+              <td>&gt;</td>
+              <td>크다</td>
+              <td>7 &gt; 5 → true</td>
+            </tr>
+            <tr>
+              <td>&lt;=</td>
+              <td>작거나 같다</td>
+              <td>3 &lt;= 3 → true</td>
+            </tr>
+        
+            <!-- 논리 연산자 -->
+            <tr>
+              <td rowspan="3">논리 연산자</td>
+              <td>&&</td>
+              <td>AND (모두 true일 때 true)</td>
+              <td>true && false → false</td>
+            </tr>
+            <tr>
+              <td>||</td>
+              <td>OR (하나라도 true면 true)</td>
+              <td>true || false → true</td>
+            </tr>
+            <tr>
+              <td>!</td>
+              <td>NOT (논리 부정)</td>
+              <td>!true → false</td>
+            </tr>
+          </tbody>
+        </table>
+    </section>
+    <section>
+      <h2>연산자 우선 순위</h2>
+      <table>
+        <tr>
+          <td style="text-align: left;">단항 연산자 > 산술 연산자 > 비교 연산자 > 논리 연산자 > 할당 연산자</td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>제어문</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>종류</th>
+            <th>형식</th>
+            <th>설명</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- if 문 -->
+          <tr>
+            <td>if 문</td>
+            <td>
+<pre>
+if (조건) {
+  // 조건이 true일 때 실행
+}
+</pre>
+            </td>
+            <td>조건이 참일 때 블록 내부 코드 실행</td>
+          </tr>
+      
+          <!-- if ~ else -->
+          <tr>
+            <td>if ~ else</td>
+            <td>
+<pre>
+if (조건) {
+  // 참일 때
+} else {
+  // 거짓일 때
+}
+</pre>
+            </td>
+            <td>조건이 거짓이면 else 블록 실행</td>
+          </tr>
+      
+          <!-- if ~ else if -->
+          <tr>
+            <td>if ~ else if</td>
+            <td>
+<pre>
+if (조건1) {
+  // 조건1이 true
+} else if (조건2) {
+  // 조건2가 true
+} else {
+  // 모두 false일 때
+}
+</pre>
+            </td>
+            <td>여러 조건을 순차적으로 비교</td>
+          </tr>
+      
+          <!-- switch -->
+          <tr>
+            <td>switch</td>
+            <td>
+<pre>
+switch (변수) {
+  case 값1:
+    // 값1일 때 실행
+    break;
+  case 값2:
+    // 값2일 때 실행
+    break;
+  default:
+    // 아무 case도 아닐 때
+}
+</pre>
+            </td>
+            <td>값에 따라 분기 처리, break 필수</td>
+          </tr>
+      
+          <!-- while -->
+          <tr>
+            <td>while</td>
+            <td>
+<pre>
+while (조건) {
+  // 조건이 true일 동안 반복
+}
+</pre>
+            </td>
+            <td>조건이 true인 동안 반복 수행</td>
+          </tr>
+      
+          <!-- do while -->
+          <tr>
+            <td>do ~ while</td>
+            <td>
+<pre>
+do {
+  // 최소 1회 실행 후 조건 확인
+} while (조건);
+</pre>
+            </td>
+            <td>일단 1번 실행하고 조건을 평가</td>
+          </tr>
+      
+          <!-- for -->
+          <tr>
+            <td>for</td>
+            <td>
+<pre>
+for (초기값; 조건; 증감) {
+  // 반복 실행
+}
+</pre>
+            </td>
+            <td>가장 일반적인 반복문 형태</td>
+          </tr>
+      
+          <!-- for ~ in -->
+          <tr>
+            <td>for...in</td>
+            <td>
+<pre>
+for (let key in 객체) {
+  // 객체의 속성 이름 반복
+}
+</pre>
+            </td>
+            <td>객체의 키(key) 순회</td>
+          </tr>
+      
+          <!-- for ~ of -->
+          <tr>
+            <td>for...of</td>
+            <td>
+<pre>
+for (let item of 배열) {
+  // 배열 요소 반복
+}
+</pre>
+            </td>
+            <td>이터러블 객체(Array, Set 등) 순회</td>
+          </tr>
+      
+          <!-- break / continue -->
+          <tr>
+            <td>break / continue</td>
+            <td>
+<pre>
+for (let i = 0; i < 5; i++) {
+  if (i === 3) break;     // 반복 종료
+  if (i === 1) continue;  // 이후 문장 건너뜀
+}
+</pre>
+            </td>
+            <td>
+              break는 반복 종료,<br>
+              continue는 이번 루프 건너뜀
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+</html>
