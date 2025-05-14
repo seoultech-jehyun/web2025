@@ -1,0 +1,33 @@
+body {
+    margin: 60px;
+    padding: 0;
+}
+
+section {
+    padding: 10px 0;
+}
+
+li {
+    margin: 10px;
+} 
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #eee;
+    width: 60%;
+}
+
+table tr th {
+    padding: 10px 20px;
+    background-color: #eee;
+}
+
+table tr td {
+    padding: 10px 20px;
+    border: 1px solid #eee;
+}
+
+pre {
+    margin: 0;
+    font-family: monospace;
+}

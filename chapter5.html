@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 5 / 함수와 스코프</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Chapter 5 / 함수와 스코프</h1>
+  <section>
+    <h2>함수 선언 & 실행</h2>
+    <ui>
+      <li>함수를 선언할 때에는 function이라는 예약어를 사용하고 함수 이름을 적은 후 중괄호 안에 실행할 여러 명령들을 묶는다.</li>
+      <li>함수를 실행(호출)할 때는 함수 이름 뒤에 충괄호 ()를 붙인다.</li>
+      <h3>함수 선언</h3>
+      <table>
+        <tr>
+          <td>
+<pre>
+function 함수명() {
+  명령(들)
+}
+</pre>
+          </td>
+        </tr>
+      </table>
+      <h3>함수 실행</h3>
+      <table>
+        <tr>
+          <td>
+<pre>
+함수명()
+</pre>
+          </td>
+        </tr>
+      </table>
+    </ui>
+  </section>
+  <section>
+    <h2>매개변수와 인수</h2>
+    <ui>
+      <table>
+          <tr>
+            <td><strong>매개변수<br>(Parameter)</strong></td>
+            <td>
+<pre>
+function greet(name) {
+  console.log("Hello, " + name);
+}
+</pre><br>
+              "name"이 매개변수
+            </td>
+          </tr>
+          <tr>
+            <td><strong>인수<br>(Argument)</strong></td>
+            <td>
+<pre>
+greet("Alice");
+</pre><br>
+              "Alice"가 인수
+            </td>
+          </tr>
+      </table>
+      <h3>매개변수</h3>
+      <li>함수를 선언할 때 외부에서 값을 받는 변수</li>
+      <li>함수 이름 옆의 괄호 안에 매개변수 이름을 넣어준다.</li>
+      <li>매개변수에 이름을 붙이는 방법은 일반적인 변수 이름을 붙이는 방법과 같다.</li>
+      <li>매개변수는 선언된 함수에서만 사용한다.</li>
+      <li>함수에 여러 개의 매개변수가 필요할 때에는 매개변수 사이에 쉼표(,)를 찍으면서 나열한다.</li>
+      <h3>인수</h3>
+      <li>매개변수가 있는 함수를 실행할 때, 매개변수로 값을 넘겨주는 변수</li>
+    </ui>
+  </section>
+  <section>
+    <h2>스코프</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>스코프 종류</th>
+          <th>설명</th>
+          <th>예제</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 전역 스코프 -->
+        <tr>
+          <td><strong>전역 스코프<br>(Global Scope)</strong></td>
+          <td>
+            코드 어디서든 접근 가능한 범위<br>
+            함수 밖에서 선언된 변수
+          </td>
+          <td>
+<pre>
+let x = 10;
+function printX() {
+  console.log(x); // 10
+}
+</pre>
+          </td>
+        </tr>
+    
+        <!-- 함수 스코프 -->
+        <tr>
+          <td><strong>함수 스코프<br>(Function Scope)</strong></td>
+          <td>
+            함수 내에서 선언된 변수는<br>
+            함수 바깥에서 접근 불가
+          </td>
+          <td>
+<pre>
+function test() {
+  let y = 5;
+}
+console.log(y); // 오류
+</pre>
+          </td>
+        </tr>
+    
+        <!-- 블록 스코프 -->
+        <tr>
+          <td><strong>블록 스코프<br>(Block Scope)</strong></td>
+          <td>
+            if, for 등 `{ }` 블록 내부에서만 유효<br>
+            `let`, `const` 사용 시 해당됨
+          </td>
+          <td>
+<pre>
+if (true) {
+  let z = 7;
+}
+console.log(z); // 오류
+</pre>
+          </td>
+        </tr>
+    
+        <!-- 렉시컬 스코프 -->
+        <tr>
+          <td><strong>렉시컬 스코프<br>(Lexical Scope)</strong></td>
+          <td>
+            함수가 선언된 위치에 따라<br>
+            상위 스코프가 정해짐 (정적 스코프)
+          </td>
+          <td>
+<pre>
+let a = 1;
+
+function outer() {
+  let b = 2;
+  function inner() {
+    console.log(a); // 1
+    console.log(b); // 2
+  }
+  inner();
+}
+</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>    
+  </section>
+</html>

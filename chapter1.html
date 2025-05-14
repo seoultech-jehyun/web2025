@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1 / 웹 구조</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Chapter 1 / 웹 구조</h1>
+    <section>
+        <h2>웹 구성 요소</h2>
+        <ui>
+            <li>클라이언트/서버 구조</li>
+            <li>브라우저, 웹 서버</li>
+            <li>웹의 3요소</li>
+            <li>HTTP: 웹 서비스 요청과 응답 프로토콜</li>
+            <table>
+                <tr>
+                    <td>
+                        프로토콜 : 통신규약<br>
+                        - 통신 절차와 메시지 형식을 규정<br>
+                        HTTP 프로토콜<br>
+                        - 하이퍼텍스트 데이터 서비스를 위한 프로토콜<br>
+                        - 애플리케이션간 연결을 맺고, 데이터 교환을 하고, 연결을 종료함<br>
+                        HTTP 메시지<br>
+                        - header와 body로 구성<br>
+                        - Header : 메시지유형(GET/POST/PUT/DELETE), URL, Query String, Cookie, …<br>
+                        - Body : data (HTML 문서, 업로드 데이터)
+                    </td>
+                </tr>
+            </table>
+            <li>URL: 요청 서비스 주소</li>
+            <table>
+                <tr>
+                    <td>
+                        - Scheme : 접근방법. HTTP/FTP/e-mail/file<br>
+                        - Host : 서버 도메인 이름 혹은 IP 주소<br>
+                        - Port : 서비스 포트 번호. 웹 서버의 디폴트 포트는 80이고 생략 가능<br>
+                        - Path : 서버 내의 정보 위치 정보
+                    </td>
+                </tr>
+            </table>
+            <li>HTML: 브라우저 화면에 표시도도록 구성된 정보 페이지</li>
+            <table>
+                <tr>
+                    <td>
+                        웹 문서 구성 요소<br>
+                        - 정보 + 태그, CSS, JavaScript<br>
+                        역할 분리<br>
+                        - 태그 : 정보의 구조, 의미 표현<br>
+                        - CSS : 스타일 정의<br>
+                        - 초기에는 Javascript 없이 정적인 문서 (Static)<br>
+                        - 나중에 Javascript가 추가됨 → Dynamic HTML<br>
+                        - JavaScript : 다이나믹 & 인터액티브 제어<br>
+                        - 그래픽 제어, 이벤트 제어, 애니메이션, 서버와의 통신<br>
+                        - JavaScript는 웹 클라이언트의 기능 확장
+                    </td>
+                </tr>
+            </table>
+        </ui>
+    </section>
+    <section>
+        <h2>브라우저 구조</h2>
+        <table style="text-align: center;">
+            <tr>
+                <th colspan="4">키보드 | 마우스 | 화면</th>
+            </tr>
+            <tr>
+                <td colspan="3">User Interface</td>
+                <td rowspan="4">Data Persistence<br>(객체 저장 메모리 DB)</td>
+            </tr>
+            <tr>
+                <td colspan="3">Browser engine</td>
+            </tr>
+            <tr>
+                <td colspan="3">Rendering engine</td>
+            </tr>
+            <tr>
+                <td>Networking</td>
+                <td>JS Interpreter</td>
+                <td>UI Backend</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
